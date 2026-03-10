@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-50: #f8fafc;
+  --color-brand-100: #f1f5f9;
+  --color-brand-200: #e2e8f0;
+  --color-brand-300: #cbd5e1;
+  --color-brand-400: #94a3b8;
+  --color-brand-500: #64748b;
+  --color-brand-600: #475569;
+  --color-brand-700: #334155;
+  --color-brand-800: #1e293b;
+  --color-brand-900: #0f172a;
+  --color-brand-950: #020617;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-50 text-brand-950 antialiased;
+  }
+}
+
+.glass {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.markdown-body {
+  @apply text-brand-800 leading-relaxed;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-serif font-semibold text-brand-950 mt-6 mb-3;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply ml-6 mb-4 list-disc;
+}
+
+.markdown-body code {
+  @apply bg-brand-100 px-1.5 py-0.5 rounded text-sm font-mono text-brand-900;
+}
+
+.markdown-body pre {
+  @apply bg-brand-900 text-brand-50 p-4 rounded-xl overflow-x-auto mb-4 font-mono text-sm;
+}
